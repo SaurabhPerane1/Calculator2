@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mainDiv{
+            background-color: rgb(45, 47, 59);
+            width: 243px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            box-shadow: 12px 16px 18px rgba(0, 0, 0, 0.685);
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10%;
+            border-radius: 1.5mm;
+        }
+        #display{
+            font-size: 1.1cm;
+            width: 235px;
+            height: 50px; 
+            background-color: rgba(253, 255, 240, 0.685);
+            border-radius: 1.5mm;
+            border-width: 0.7mm;
+        }
+        #display:hover{
+            box-shadow: none;
+        }
+        div{
+            display: flexbox;
+            flex-grow: 100px;
+            flex-shrink: 10px;
+            margin-top: 2mm;
+            margin-bottom: 2mm;
+        }
+        input{
+            font-size: 0.7cm;
+            width: 50px;
+            height: 50px;
+            margin-left: 1mm;
+            margin-right: 1mm;
+            border-radius: 1cm;
+            border: none;
+            background-color: burlywood;
+        }
+        input:hover{
+            box-shadow: 0px 1px 10px rgb(222,184,135);
+        }
+        #percent{
+            background-color: rgb(255, 142, 37);
+        }
+        #percent:hover{
+            box-shadow: 0px 1px 10px rgb(255, 142, 37);
+        }
+        #add{
+            background-color: rgb(177, 109, 255);
+        }
+        #add:hover{
+            box-shadow: 0px 1px 10px rgb(177, 109, 255);
+        }
+        #sub{
+            background-color: rgb(166, 255, 94);
+        }
+        #sub:hover{
+            box-shadow: 0px 1px 10px rgb(166, 255, 94);
+        }
+        #mul{
+            background-color: rgb(153, 245, 217);
+        }
+        #mul:hover{
+            box-shadow: 0px 1px 10px rgb(153, 245, 217);
+        }
+        #equalto{
+            background-color: rgb(132, 134, 248);
+            width: 110px;
+        }
+        #equalto:hover{
+            box-shadow: 0px 1px 10px rgb(132, 134, 248);
+        }
+        #div{
+            background-color: rgb(255, 115, 115);
+        }
+        #div:hover{
+            box-shadow: 0px 1px 10px rgb(255, 115, 115);
+        }
+        #copyright{
+            color: rgb(88, 88, 88);
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="mainDiv">
+        <div>
+            <input id="display" type="text" name="display">
+        </div>
+        <div>
+            <input type="button" value="AC" onclick="display.value =' '">
+            <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0, -1)">
+            <input type="button" value="." onclick="display.value +='.'">
+            <input id="percent" type="button" value="%" onclick="display.value +='%'">
+        </div>
+        <div>
+            <input type="button" value="1" onclick="display.value +='1'">
+            <input type="button" value="2" onclick="display.value +='2'">
+            <input type="button" value="3" onclick="display.value +='3'">
+            <input id="add" type="button" value="+" onclick="display.value +='+'">
+        </div>
+        <div>
+            <input type="button" value="4" onclick="display.value +='4'">
+            <input type="button" value="5" onclick="display.value +='5'">
+            <input type="button" value="6" onclick="display.value +='6'">
+            <input id="sub" type="button" value="-" onclick="display.value +='-'">
+        </div>
+        <div>
+            <input type="button" value="7" onclick="display.value +='7'">
+            <input type="button" value="8" onclick="display.value +='8'">
+            <input type="button" value="9" onclick="display.value +='9'">
+            <input id="mul" type="button" value="x" onclick="display.value +='*'">
+        </div>
+        <div>
+            <input type="button" value="0" onclick="display.value +='0'">
+            <input id="div" type="button" value="/" onclick="display.value +='/'">
+            <input id="equalto" type="button" value="=" onclick="display.value = eval(display.value)">
+        </div>
+        <p id="copyright">©saurabhperane</p>
+    </div>
+</body>
+</html>
